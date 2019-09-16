@@ -17,6 +17,8 @@ namespace FileUploaderAngularExample.Controllers
         private static readonly FormOptions _defaultFormOptions = new FormOptions();
 
         [HttpPost]
+        [Route("/media/upload")]
+        [DisableRequestSizeLimit]
         public async Task<IActionResult> Upload()
         {
             string targetFilePath = null;
